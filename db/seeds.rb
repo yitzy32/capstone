@@ -1,7 +1,116 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+Image.create!([
+  {url: "https://images-gmi-pmc.edge-generalmills.com/ae7633e8-25b4-403b-a86c-03b7300982dc.jpg", alt: "Add salt to flour", recipe_id: 1},
+  {url: "https://images-gmi-pmc.edge-generalmills.com/2a409724-c7a1-4110-8048-8f592ed65a3b.jpg", alt: "Mix dough", recipe_id: 1},
+  {url: "https://images-gmi-pmc.edge-generalmills.com/466a6689-1547-4148-98ef-44a2b8c318c8.jpg", alt: "Add chocolate chips to dough", recipe_id: 1},
+  {url: "https://images-gmi-pmc.edge-generalmills.com/205de745-2319-4cf6-8322-e6fb7d2293a7.jpg", alt: "Scoop cookie dough onto baking sheet", recipe_id: 1},
+  {url: "https://images-gmi-pmc.edge-generalmills.com/cbe8b51a-c3c1-4dcf-8d79-76f98565d3e0.jpg", alt: "Baked Cookies", recipe_id: 1},
+  {url: "https://www.kingarthurbaking.com/sites/default/files/styles/featured_image_2x/public/2020-02/the-easiest-loaf-of-bread-youll-ever-bake.jpg?itok=LsBnSw0g", alt: "baked bread", recipe_id: 2},
+  {url: "https://www.kingarthurbaking.com/sites/default/files/styles/featured_image_2x/public/recipe_legacy/6791-3-large.jpg?itok=G1WMS3oN", alt: "baked bread sliced", recipe_id: 2},
+  {url: "https://www.kingarthurbaking.com/sites/default/files/2020-02/step-2_0.jpg", alt: "mix dough", recipe_id: 2},
+  {url: "https://www.kingarthurbaking.com/sites/default/files/2020-02/step-3.gif", alt: "knead dough gif", recipe_id: 2},
+  {url: "https://www.kingarthurbaking.com/sites/default/files/2020-02/step-5_0.jpg", alt: "cover and let rise", recipe_id: 2},
+  {url: "https://www.kingarthurbaking.com/sites/default/files/2020-02/step-6.jpg", alt: "cut and shape", recipe_id: 2},
+  {url: "https://www.kingarthurbaking.com/sites/default/files/2020-02/step-7_1.gif", alt: "fold dough gif", recipe_id: 2},
+  {url: "https://www.kingarthurbaking.com/sites/default/files/2020-02/step-9.gif", alt: "poke dough gif", recipe_id: 2},
+  {url: "https://www.kingarthurbaking.com/sites/default/files/2020-02/step-12.gif", alt: "slice dough gif", recipe_id: 2},
+  {url: "https://www.kingarthurbaking.com/sites/default/files/2020-02/step-14.jpg", alt: "finished bread", recipe_id: 2},
+  {url: "https://www.shugarysweets.com/wp-content/uploads/2016/10/peanut-butter-revel-bars-4.jpg", alt: "peanut butter bars stacked", recipe_id: 3},
+  {url: "https://www.shugarysweets.com/wp-content/uploads/2016/10/peanut-butter-revel-bars-2.jpg", alt: "plated peanut butter bars", recipe_id: 3},
+  {url: "https://www.shugarysweets.com/wp-content/uploads/2016/10/peanut-butter-revel-bars-5.jpg", alt: "zoomed in peanut butter bars", recipe_id: 3},
+  {url: "https://www.shugarysweets.com/wp-content/uploads/2014/05/frosted-sugar-cookie-bars-4-e1400596773285.jpg", alt: "pb bars with frosting", recipe_id: 3}
+])
+IngredientRecipe.create!([
+  {ingredient_id: 1, recipe_id: 1, measurement_in_ml: "1021.0", number_of: nil},
+  {ingredient_id: 2, recipe_id: 1, measurement_in_ml: "5.0", number_of: nil},
+  {ingredient_id: 3, recipe_id: 1, measurement_in_ml: "2.5", number_of: nil},
+  {ingredient_id: 4, recipe_id: 1, measurement_in_ml: "237.0", number_of: nil},
+  {ingredient_id: 5, recipe_id: 1, measurement_in_ml: "177.0", number_of: nil},
+  {ingredient_id: 6, recipe_id: 1, measurement_in_ml: "177.0", number_of: nil},
+  {ingredient_id: 8, recipe_id: 1, measurement_in_ml: "5.0", number_of: nil},
+  {ingredient_id: 9, recipe_id: 1, measurement_in_ml: "473.0", number_of: nil},
+  {ingredient_id: 10, recipe_id: 1, measurement_in_ml: "237.0", number_of: nil},
+  {ingredient_id: 11, recipe_id: 2, measurement_in_ml: "1183.0", number_of: nil},
+  {ingredient_id: 5, recipe_id: 2, measurement_in_ml: "15.0", number_of: nil},
+  {ingredient_id: 12, recipe_id: 2, measurement_in_ml: "11.0", number_of: nil},
+  {ingredient_id: 3, recipe_id: 2, measurement_in_ml: "12.0", number_of: nil},
+  {ingredient_id: 13, recipe_id: 2, measurement_in_ml: "393.0", number_of: nil},
+  {ingredient_id: 14, recipe_id: 2, measurement_in_ml: "10.0", number_of: nil},
+  {ingredient_id: 7, recipe_id: 1, measurement_in_ml: nil, number_of: 1},
+  {ingredient_id: 4, recipe_id: 3, measurement_in_ml: "237.0", number_of: nil},
+  {ingredient_id: 6, recipe_id: 3, measurement_in_ml: "437.0", number_of: nil},
+  {ingredient_id: 15, recipe_id: 3, measurement_in_ml: "118.0", number_of: nil},
+  {ingredient_id: 2, recipe_id: 3, measurement_in_ml: "5.0", number_of: nil},
+  {ingredient_id: 7, recipe_id: 3, measurement_in_ml: nil, number_of: 2},
+  {ingredient_id: 8, recipe_id: 3, measurement_in_ml: "10.0", number_of: nil},
+  {ingredient_id: 1, recipe_id: 3, measurement_in_ml: "437.0", number_of: nil},
+  {ingredient_id: 16, recipe_id: 3, measurement_in_ml: "710.0", number_of: nil},
+  {ingredient_id: 17, recipe_id: 3, measurement_in_ml: "414.0", number_of: nil},
+  {ingredient_id: 18, recipe_id: 3, measurement_in_ml: "325.0", number_of: nil}
+])
+Recipe.create!([
+  {title: "Ultimate Chocolate Chip Cookies", prep_time: 90, servings: 48, user_id: 1, source_url: nil},
+  {title: "The Easiest Loaf of Bread You'll Ever Bake", prep_time: 100, servings: 40, user_id: 1, source_url: nil},
+  {title: "Peanut Butter Revel Bars", prep_time: 38, servings: 36, user_id: 1, source_url: "https://www.shugarysweets.com/peanut-butter-revel-bars/"}
+])
+Ingredient.create!([
+  {name: "egg"},
+  {name: "all-purpose flour"},
+  {name: "vanilla"},
+  {name: "baking soda"},
+  {name: "semisweet chocolate chips"},
+  {name: "coarsely chopped nuts"},
+  {name: "brown sugar"},
+  {name: "butter"},
+  {name: "sugar"},
+  {name: "Bread flour"},
+  {name: "instant yeast"},
+  {name: "water"},
+  {name: "cornmeal"},
+  {name: "table salt"},
+  {name: "creamy peanut butter"},
+  {name: "Quick Oats Oatmeal"},
+  {name: "condensed milk"},
+  {name: "peanut butter chips"}
+])
+Direction.create!([
+  {number: 4, step: "Onto ungreased cookie sheets, drop dough by rounded tablespoonfuls 2 inches apart.", recipe_id: 1},
+  {number: 2, step: "In large bowl, beat softened butter and sugars with electric mixer on medium speed, or mix with spoon about 1 minute or until fluffy, scraping side of bowl occasionally.", recipe_id: 1},
+  {number: 1, step: "Heat oven to 375°F. In small bowl, mix flour, baking soda and salt; set aside.", recipe_id: 1},
+  {number: 5, step: "Bake 8 to 10 minutes or until light brown (centers will be soft). Cool 2 minutes; remove from cookie sheet to cooling rack. Cool completely, about 30 minutes. Store covered in airtight container.", recipe_id: 1},
+  {number: 1, step: "Weigh your flour; or measure it by gently spooning it into a cup, then sweeping off any excess.", recipe_id: 2},
+  {number: 2, step: "Stir together all of the ingredients (except the cornmeal) in a large bowl, starting with 4 1/2 cups of the flour. Use a sturdy spoon, or your stand mixer equipped with the beater paddle. Mix until everything comes together in a rough, shaggy mass of dough.", recipe_id: 2},
+  {number: 3, step: "If you’re kneading the dough by hand, turn it out onto a lightly floured surface, using some of the additional 1/2 cup of flour called for. Fold the far edge of the dough back over on itself towards you, then press it away from you with the heels of your hands. Rotate the dough 90°. Repeat this fold-press-rotate process with a rhythmic, rocking motion for about 6 minutes. When fully kneaded, the dough will be bouncy and smooth.", recipe_id: 2},
+  {number: 4, step: "If you’re using your stand mixer, switch to the dough hook and knead the dough at medium speed for about 7 minutes, until it’s smooth, elastic, and feels a bit bouncy. If the dough doesn’t form a ball that clears the sides of the bowl, sprinkle in just enough of the additional flour to make this happen.", recipe_id: 2},
+  {number: 5, step: "Place the dough in a bowl that’s been lightly greased with vegetable oil or cooking spray; the bowl you started with is fine. Cover the bowl with plastic wrap or another airtight cover, and let the dough rise at room temperature until it's doubled in size, about 1 to 2 hours. If your kitchen is particularly cold (below 65°F), place the bowl of dough in your turned-off oven with the oven light on.", recipe_id: 2},
+  {number: 6, step: "Gently deflate the dough and cut it in half. Pat each half into a rough 6” x 8” oval.", recipe_id: 2},
+  {number: 7, step: "Working with one piece of dough at a time, grab a short side and fold the dough like a business letter (one short side into the center, the other short side over it). Use the heel of your hand to press the open edge of the “letter” closed. Gently pat and roll the dough into a log about 10” long. Repeat with the remaining piece of dough.", recipe_id: 2},
+  {number: 8, step: "Place the loaves, seam-side down, on a baking sheet (lined with parchment if desired). Sprinkle the pan (or parchment) generously with cornmeal; this will keep the bread from sticking and give it a crunchy bottom crust.", recipe_id: 2},
+  {number: 9, step: "Let the loaves rise, lightly covered with greased plastic wrap, for 45 minutes. They should become nicely puffy. Gently poke your index finger into the side of one of the loaves; if the indentation remains, your bread is ready to bake.", recipe_id: 2},
+  {number: 10, step: "Towards the end of the rising time, preheat the oven to 450°F.", recipe_id: 2},
+  {number: 11, step: "For extra-crusty crust and a great rise, add steam to your oven as follows: While the oven is preheating, place an empty cast-iron frying pan on the lowest rack. Bring 1 cup of water to a boil in the microwave or on the stovetop.", recipe_id: 2},
+  {number: 12, step: "When your bread is risen, use a sieve to dust the loaves with a thin coat of flour. Then make three or four 1/2” deep diagonal slashes in each loaf; these slashes will help the bread rise evenly as it bakes. Place the bread in the oven and pour the boiling water into the frying pan below. Quickly shut the oven door. Wear good oven mitts during this process to shield your hands and arms from the steam.", recipe_id: 2},
+  {number: 13, step: "Bake the bread for 20 to 25 minutes, until the crust is golden brown and a loaf sounds hollow to the touch when you tap it on the bottom. The interior temperature of the bread should register at least 190°F on a digital thermometer.", recipe_id: 2},
+  {number: 14, step: "Turn the oven off, crack the door open, and allow the bread to remain inside for 5 additional minutes; this helps keep the crust crisp. Remove the bread from the oven and cool it on a rack. It’s best not to cut into the bread until it’s cooled down a bit; cutting into hot bread can negatively affect its texture.", recipe_id: 2},
+  {number: 15, step: "Store the bread, well-wrapped, at room temperature for a couple of days. Freeze for longer storage.", recipe_id: 2},
+  {number: 3, step: "Beat in egg and vanilla until smooth. Stir in flour mixture just until blended (dough will be stiff). Stir in chocolate chips and nuts.", recipe_id: 1},
+  {number: 1, step: "Preheat oven to 350°F. Line a 15x10x1-inch baking sheet with parchment paper. Set aside.", recipe_id: 3},
+  {number: 2, step: "In a large bowl, beat 14 Tbsp of butter (reserving the extra two for later), brown sugar, and peanut butter until well blended. Add in baking soda, eggs and vanilla extract. Beat until combined. Add flour and oats and mix until blended. Set aside.", recipe_id: 3},
+  {number: 3, step: "In a small saucepan, combine sweetened condensed milk and 2 Tbsp butter. Heat over low heat until butter is melted. Fold in peanut butter morsels and stir constantly until melted and smooth.", recipe_id: 3},
+  {number: 4, step: "Press ⅔ of cookie dough into bottom of baking sheet. Keep pressing with your fingertips, it will fit, honest!! Pour peanut butter mixture over top of cookie dough and spread evenly. Drop remaining dough by teaspoon over the top (will not cover completely, that's okay).", recipe_id: 3},
+  {number: 5, step: "Bake for 25-28 minutes until browned. Cool completely. Cut and enjoy. Store in airtight container (best when chilled)!", recipe_id: 3}
+])
+PantryItem.create!([
+  {ingredient_id: 1, measurement_in_ml: "2267.19", user_id: 1, number_of: nil},
+  {ingredient_id: 2, measurement_in_ml: "453.592", user_id: 1, number_of: nil},
+  {ingredient_id: 3, measurement_in_ml: "768.912", user_id: 1, number_of: nil},
+  {ingredient_id: 4, measurement_in_ml: "473.176", user_id: 1, number_of: nil},
+  {ingredient_id: 5, measurement_in_ml: "1893.0", user_id: 1, number_of: nil},
+  {ingredient_id: 6, measurement_in_ml: "946.353", user_id: 1, number_of: nil},
+  {ingredient_id: 7, measurement_in_ml: "12.0", user_id: 1, number_of: nil},
+  {ingredient_id: 8, measurement_in_ml: "946.353", user_id: 1, number_of: nil},
+  {ingredient_id: 9, measurement_in_ml: "2129.29", user_id: 1, number_of: nil},
+  {ingredient_id: 10, measurement_in_ml: "453.592", user_id: 1, number_of: nil}
+])
+User.create!([
+  {name: "adam", email: "adam@example.com", password_digest: "$2a$12$DR9hh1RQNMXv3q5iThkUTOCna0eA4Ps/ssfiCzkcaB80DDWpLPVtq"}
+])
