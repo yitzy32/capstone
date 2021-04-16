@@ -1,4 +1,9 @@
 class Api::RecipesController < ApplicationController
+  def show
+    @recipe = Recipe.find_by(id: params[:id])
+    render "show.json.jb"
+  end
+
   def create
     @recipe = Recipe.new(
       title: "Individual Apple Crisp",

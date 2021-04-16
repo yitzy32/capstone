@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
     post "/pantry_items" => "pantry_items#create"
 
+    get "/recipes/:id" => "recipes#show"
     post "/recipes" => "recipes#create"
   end
 end
