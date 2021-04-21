@@ -6,4 +6,7 @@
   user_id: @recipe.user_id,
   source_url: @recipe.source_url,
   ingredients: @recipe.ingredients,
+  measurements: @recipe.ingredient_recipes,
+  directions: @recipe.directions,
+  images: @recipe.images,
 }
