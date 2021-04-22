@@ -1,0 +1,9 @@
+{
+  id: pantry_item.id,
+  name: pantry_item.ingredient["name"],
+  ingredient_used_in: pantry_item.ingredient.recipes,
+  measurement_in_ml: pantry_item.measurement_in_ml,
+  number_of: pantry_item.number_of,
+  ingredient_id: pantry_item.ingredient_id,
+  user_ifo: pantry_item.user,
+}
