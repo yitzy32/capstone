@@ -100,16 +100,16 @@ Direction.create!([
   {number: 5, step: "Bake for 25-28 minutes until browned. Cool completely. Cut and enjoy. Store in airtight container (best when chilled)!", recipe_id: 3}
 ])
 PantryItem.create!([
-  {ingredient_id: 1, measurement_in_ml: "2267.19", user_id: 1, number_of: nil},
-  {ingredient_id: 2, measurement_in_ml: "453.592", user_id: 1, number_of: nil},
-  {ingredient_id: 3, measurement_in_ml: "768.912", user_id: 1, number_of: nil},
-  {ingredient_id: 4, measurement_in_ml: "473.176", user_id: 1, number_of: nil},
-  {ingredient_id: 5, measurement_in_ml: "1893.0", user_id: 1, number_of: nil},
-  {ingredient_id: 6, measurement_in_ml: "946.353", user_id: 1, number_of: nil},
-  {ingredient_id: 7, measurement_in_ml: "12.0", user_id: 1, number_of: nil},
-  {ingredient_id: 8, measurement_in_ml: "946.353", user_id: 1, number_of: nil},
-  {ingredient_id: 9, measurement_in_ml: "2129.29", user_id: 1, number_of: nil},
-  {ingredient_id: 10, measurement_in_ml: "453.592", user_id: 1, number_of: nil}
+  {ingredient_id: 1, measurement_in_ml: "2267.19", user_id: 1, number_of: nil, name: "all-purpose flour"},
+  {ingredient_id: 8, measurement_in_ml: "946.353", user_id: 1, number_of: nil, name: "vanilla"},
+  {ingredient_id: 10, measurement_in_ml: "453.592", user_id: 1, number_of: nil, name: "coarsely chopped nuts"},
+  {ingredient_id: 6, measurement_in_ml: "946.353", user_id: 1, number_of: nil, name: "brown sugar"},
+  {ingredient_id: 5, measurement_in_ml: "1893.0", user_id: 1, number_of: nil, name: "sugar"},
+  {ingredient_id: 7, measurement_in_ml: nil, user_id: 1, number_of: 12, name: "egg"},
+  {ingredient_id: 2, measurement_in_ml: "453.592", user_id: 1, number_of: nil, name: "baking soda"},
+  {ingredient_id: 3, measurement_in_ml: "768.912", user_id: 1, number_of: nil, name: "table salt"},
+  {ingredient_id: 9, measurement_in_ml: "2129.29", user_id: 1, number_of: nil, name: "semisweet chocolate chips"},
+  {ingredient_id: 4, measurement_in_ml: "473.176", user_id: 1, number_of: nil, name: "butter"}
 ])
 User.create!([
   {name: "adam", email: "adam@example.com", password_digest: "$2a$12$DR9hh1RQNMXv3q5iThkUTOCna0eA4Ps/ssfiCzkcaB80DDWpLPVtq"}
