@@ -8,7 +8,7 @@ class Api::PantryItemsController < ApplicationController
     @pantry_item = PantryItem.new(
       ingredient_id: params[:ingredient_id],
       measurement_in_ml: params[:measurement_in_ml],
-      user_id: params[:user_id],
+      user_id: current_user.id,
     )
     @pantry_item.save
     render "show.json.jb"
