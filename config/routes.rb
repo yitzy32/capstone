@@ -16,6 +16,7 @@ Rails.application.routes.draw do
     get "/recipes/:id" => "recipes#show"
     post "/recipes" => "recipes#create"
 
+    get "/ingredients" => "ingredients#index"
     post "/ingredients" => "ingredients#create"
   end
 end
