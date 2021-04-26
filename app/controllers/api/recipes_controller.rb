@@ -1,18 +1,25 @@
 class Api::RecipesController < ApplicationController
+  def index
+    @recipes = Recipe.where(id: current_user.id)
+    render "index.json.jb"
+  end
+
   def show
     @recipe = Recipe.find_by(id: params[:id])
     render "show.json.jb"
   end
 
   def create
-    @recipe = Recipe.new(
-      title: params[:title],
-      prep_time: params[:prep_time],
-      servings: params[:servings],
-      user_id: current_user.id,
-      source_url: params[:source_url],
-    )
-    @recipe.save!
+    params[:recipes].each do |recipe|
+      @recipe = Recipe.new(
+        title: recipe[:title],
+        prep_time: recipe[:prep_time],
+        servings: recipe[:servings],
+        source_url: recipe[:source_url],
+        user_id: current_user.id,
+      )
+      @recipe.save!
+    end
 
     params[:directions].each do |direction|
       @direction = Direction.new(

@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     post "/pantry_items" => "pantry_items#create"
     patch "/pantry_items/:id" => "pantry_items#update"
 
+    get "/recipes" => "recipes#index"
     get "/recipes/:id" => "recipes#show"
     post "/recipes" => "recipes#create"
 
