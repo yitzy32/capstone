@@ -56,4 +56,28 @@ class Api::RecipesController < ApplicationController
 
     render "show.json.jb"
   end
+
+  def update
+    @recipe = Recipe.find_by(id: params[:id])
+    @recipe.ingredients.each do |ingredient|
+      @pantry_item = PantryItem.find_by(ingredient_id: ingredient.id)
+      @ingredient_recipe = IngredientRecipe.find_by(ingredient_id: ingredient.id)
+
+      if @pantry_item.measurement_in_ml != nil
+        subtracted_ml = @pantry_item.measurement_in_ml - @ingredient_recipe.measurement_in_ml
+        @pantry_item.measurement_in_ml = subtracted_ml
+        if @pantry_item.measurement_in_ml < 0
+          @pantry_item.measurement_in_ml = 0
+        end
+      elsif @pantry_item.number_of != nil
+        subtracted_num_of = @pantry_item.number_of - @ingredient_recipe.number_of
+        @pantry_item.number_of = subtracted_num_of
+        if @pantry_item.number_of < 0
+          @pantry_item.number_of = 0
+        end
+      end
+      @pantry_item.save
+    end
+    render "show.json.jb"
+  end
 end
