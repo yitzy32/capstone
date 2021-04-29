@@ -1,1 +1,1 @@
-render partial: "pantry_item.json.jb", locals: {pantry_item: @pantry_item}
+render partial: "pantry_item.json.jb", locals: { pantry_item: @pantry_item }
