@@ -14,6 +14,14 @@ class Api::PantryItemsController < ApplicationController
     render "show.json.jb"
   end
 
+  def update
+    @pantry_item = PantryItem.find_by(id: params[:id])
+    @pantry_item.measurement_in_ml = params[:measurement_in_ml] || @pantry_item.measurement_in_ml
+    @pantry_item.number_of = params[:number_of] || @pantry_item.number_of
+    @pantry_item.save
+    render "show.json.jb"
+  end
+
   def destroy
     @pantry_item = PantryItem.find_by(id: params[:id])
     render json: { message: "Pantry Item Successfully Removed" }
