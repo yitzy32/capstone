@@ -4,6 +4,11 @@ class Api::PantryItemsController < ApplicationController
     render "index.json.jb"
   end
 
+  def show
+    @pantry_item = PantryItem.find_by(id: params[:id])
+    render "show.json.jb"
+  end
+
   def create
     @pantry_item = PantryItem.new(
       ingredient_id: params[:ingredient_id],

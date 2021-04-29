@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     post "/sessions" => "sessions#create"
 
     get "/pantry_items" => "pantry_items#index"
+    get "/pantry_items/:id" => "pantry_items#show"
     post "/pantry_items" => "pantry_items#create"
     patch "/pantry_items/:id" => "pantry_items#update" # allows user to update amounts manually
     delete "/pantry_items/:id" => "pantry_items#destroy"
