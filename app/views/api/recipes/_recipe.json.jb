@@ -6,7 +6,14 @@
   user_id: recipe.user_id,
   source_url: recipe.source_url,
   ingredients: recipe.ingredients,
-  measurements: recipe.ingredient_recipes,
+  measurements: recipe.ingredient_recipes.map do |measurement|
+    {
+      id: measurement.id,
+      measurement_in_ml: measurement.measurement_in_ml,
+      number_of: measurement.number_of,
+      name: measurement.ingredient.name,
+    }
+  end,
   directions: recipe.directions,
   images: recipe.images,
 }

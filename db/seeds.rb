@@ -51,9 +51,10 @@ Ingredient.create!([
   { name: "peanut butter chips" },
 ])
 Direction.create!([
-  { number: 4, step: "Onto ungreased cookie sheets, drop dough by rounded tablespoonfuls 2 inches apart.", recipe_id: 1 },
-  { number: 2, step: "In large bowl, beat softened butter and sugars with electric mixer on medium speed, or mix with spoon about 1 minute or until fluffy, scraping side of bowl occasionally.", recipe_id: 1 },
   { number: 1, step: "Heat oven to 375°F. In small bowl, mix flour, baking soda and salt; set aside.", recipe_id: 1 },
+  { number: 2, step: "In large bowl, beat softened butter and sugars with electric mixer on medium speed, or mix with spoon about 1 minute or until fluffy, scraping side of bowl occasionally.", recipe_id: 1 },
+  { number: 3, step: "Beat in egg and vanilla until smooth. Stir in flour mixture just until blended (dough will be stiff). Stir in chocolate chips and nuts.", recipe_id: 1 },
+  { number: 4, step: "Onto ungreased cookie sheets, drop dough by rounded tablespoonfuls 2 inches apart.", recipe_id: 1 },
   { number: 5, step: "Bake 8 to 10 minutes or until light brown (centers will be soft). Cool 2 minutes; remove from cookie sheet to cooling rack. Cool completely, about 30 minutes. Store covered in airtight container.", recipe_id: 1 },
   { number: 1, step: "Weigh your flour; or measure it by gently spooning it into a cup, then sweeping off any excess.", recipe_id: 2 },
   { number: 2, step: "Stir together all of the ingredients (except the cornmeal) in a large bowl, starting with 4 1/2 cups of the flour. Use a sturdy spoon, or your stand mixer equipped with the beater paddle. Mix until everything comes together in a rough, shaggy mass of dough.", recipe_id: 2 },
@@ -70,7 +71,6 @@ Direction.create!([
   { number: 13, step: "Bake the bread for 20 to 25 minutes, until the crust is golden brown and a loaf sounds hollow to the touch when you tap it on the bottom. The interior temperature of the bread should register at least 190°F on a digital thermometer.", recipe_id: 2 },
   { number: 14, step: "Turn the oven off, crack the door open, and allow the bread to remain inside for 5 additional minutes; this helps keep the crust crisp. Remove the bread from the oven and cool it on a rack. It’s best not to cut into the bread until it’s cooled down a bit; cutting into hot bread can negatively affect its texture.", recipe_id: 2 },
   { number: 15, step: "Store the bread, well-wrapped, at room temperature for a couple of days. Freeze for longer storage.", recipe_id: 2 },
-  { number: 3, step: "Beat in egg and vanilla until smooth. Stir in flour mixture just until blended (dough will be stiff). Stir in chocolate chips and nuts.", recipe_id: 1 },
   { number: 1, step: "Preheat oven to 350°F. Line a 15x10x1-inch baking sheet with parchment paper. Set aside.", recipe_id: 3 },
   { number: 2, step: "In a large bowl, beat 14 Tbsp of butter (reserving the extra two for later), brown sugar, and peanut butter until well blended. Add in baking soda, eggs and vanilla extract. Beat until combined. Add flour and oats and mix until blended. Set aside.", recipe_id: 3 },
   { number: 3, step: "In a small saucepan, combine sweetened condensed milk and 2 Tbsp butter. Heat over low heat until butter is melted. Fold in peanut butter morsels and stir constantly until melted and smooth.", recipe_id: 3 },
