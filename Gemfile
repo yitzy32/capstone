@@ -45,3 +45,4 @@ gem 'rack-cors'
 gem 'jb'
 gem 'seed_dump'
 gem 'pry', '~> 0.13.1'
+gem "awesome_print", require:"ap"
