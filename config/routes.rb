@@ -15,10 +15,12 @@ Rails.application.routes.draw do
     delete "/pantry_items/:id" => "pantry_items#destroy"
 
     get "/recipes" => "recipes#index"
-    get "/recipes" => "recipes#index_with_api_results"
     get "/recipes/:id" => "recipes#show"
     post "/recipes" => "recipes#create"
     patch "/recipes/:id" => "recipes#update" # updates all ingredients in pantry that were used to make this recipe
+
+    get "/api_searches" => "api_searches#index"
+    post "/api_searches" => "api_searches#create"
 
     get "/ingredients" => "ingredients#index"
     post "/ingredients" => "ingredients#create"
