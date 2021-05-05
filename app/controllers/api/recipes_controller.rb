@@ -31,7 +31,7 @@ class Api::RecipesController < ApplicationController
     end
 
     params[:ingredients].each do |ingredient|
-      @ingredient = Ingredient.new(
+      @ingredient = Ingredient.find_by(
         name: ingredient[:name],
       )
       @ingredient.save!

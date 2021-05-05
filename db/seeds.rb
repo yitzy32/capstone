@@ -46,9 +46,11 @@ Ingredient.create!([
   { name: "water" },
   { name: "cornmeal" },
   { name: "creamy peanut butter" },
-  { name: "Quick Oats Oatmeal" },
+  { name: "quick oats oatmeal" },
   { name: "condensed milk" },
   { name: "peanut butter chips" },
+  { name: "marshmallows" },
+  { name: "rice krispies" },
 ])
 Direction.create!([
   { number: 1, step: "Heat oven to 375°F. In small bowl, mix flour, baking soda and salt; set aside.", recipe_id: 1 },
@@ -114,7 +116,7 @@ PantryItem.create!([
   { ingredient_id: 4, measurement_in_ml: "473.176", user_id: 1, number_of: nil, name: "butter" },
   { ingredient_id: 5, measurement_in_ml: "1893.0", user_id: 1, number_of: nil, name: "sugar" },
   { ingredient_id: 6, measurement_in_ml: "946.353", user_id: 1, number_of: nil, name: "brown sugar" },
-  { ingredient_id: 7, measurement_in_ml: nil, user_id: 1, number_of: 12, name: "egg" },
+  { ingredient_id: 7, measurement_in_ml: nil, user_id: 1, number_of: 12, name: "eggs" },
   { ingredient_id: 8, measurement_in_ml: "946.353", user_id: 1, number_of: nil, name: "vanilla" },
   { ingredient_id: 9, measurement_in_ml: "2129.29", user_id: 1, number_of: nil, name: "semisweet chocolate chips" },
   { ingredient_id: 10, measurement_in_ml: "453.592", user_id: 1, number_of: nil, name: "coarsely chopped nuts" },
@@ -126,4 +128,6 @@ PantryItem.create!([
   { ingredient_id: 16, measurement_in_ml: "4731.176", user_id: 1, number_of: nil, name: "Quick Oats Oatmeal" },
   { ingredient_id: 17, measurement_in_ml: "4731.176", user_id: 1, number_of: nil, name: "condensed milk" },
   { ingredient_id: 18, measurement_in_ml: "4731.176", user_id: 1, number_of: nil, name: "peanut butter chips" },
+  { ingredient_id: 19, measurement_in_ml: "4731.176", user_id: 1, number_of: nil, name: "marshmallows" },
+  { ingredient_id: 20, measurement_in_ml: "4731.176", user_id: 1, number_of: nil, name: "rice krispies" },
 ])
