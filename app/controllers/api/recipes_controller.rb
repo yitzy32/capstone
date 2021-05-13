@@ -79,4 +79,8 @@ class Api::RecipesController < ApplicationController
     end
     render "show.json.jb"
   end
+
+  def test
+    render json: { message: "success!!!" }
+  end
 end

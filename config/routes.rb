@@ -24,5 +24,7 @@ Rails.application.routes.draw do
 
     get "/ingredients" => "ingredients#index"
     post "/ingredients" => "ingredients#create"
+
+    get "/recipes/test" => "recipes#test"
   end
 end
