@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     patch "/pantry_items/:id" => "pantry_items#update" # allows user to update amounts manually
     delete "/pantry_items/:id" => "pantry_items#destroy"
 
+    get "/recipes/test" => "recipes#test"
     get "/recipes" => "recipes#index"
     get "/recipes/:id" => "recipes#show"
     post "/recipes" => "recipes#create"
@@ -24,7 +25,5 @@ Rails.application.routes.draw do
 
     get "/ingredients" => "ingredients#index"
     post "/ingredients" => "ingredients#create"
-
-    get "/recipes/test" => "recipes#test"
   end
 end
